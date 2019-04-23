@@ -1,0 +1,94 @@
+;; Jacob Darabaris
+;; HW6
+
+1. proc (x) -(x, 3)
+
+x					tx	tx = int -> t1
+proc (x) -(x, 3)	t0	t0 = tx -> t1	
+-(x, 3)				t1	t1 = int 
+						
+t0 = tx -> t1
+t0 = (int -> t1) -> t1
+t0 = (int -> int) -> int
+
+int -> t1
+
+2. proc (x) x
+
+x				tx
+proc (x) x		t0	t0 = tx -> tx
+
+
+3. proc (x) (x x)
+
+x				tx	tx = int -> t1
+proc (x) (x x)	t0	t0 = tx -> t1
+(x x)			t1	
+
+t0 = proc(x) (x x)
+t0 = tx -> t1
+t0 = (int -> t1) -> t1
+
+4. proc (x) proc (y) if x then y else 99
+
+x										tx	tx = bool
+y										ty	ty = int
+proc (x) proc (y) if x then y else 99		t0	t0 = tx -> tx
+proc (y) if x then y else 99				t1	t1 = ty -> t2
+if x then y else 99						t2	t2 = int
+
+
+
+t0 = proc (x) proc (y) if x then y else 99
+t0 = tx -> (ty -> t2)
+t0 = bool -> (int -> int)
+
+5. 	(proc (p) if p then 88 else 99
+		proc (z) z)
+
+p									tp	tp = bool
+z									tz
+(proc (p) if p then 88 else 99		
+	proc (z) z)						t0	?
+proc (z) z)							t1	t1 = tz -> tz
+(proc (p) if p then 88 else 99		t2	t2 = t1 -> t0
+										t2 = tp -> t3
+if p then 88 else 99					t3	t3 = int
+
+t2 = tp -> t3
+t2 = bool -> int 
+t2 = t1 -> t0
+t2 = (tz -> tz) -> t0
+bool -> int = (tz -> tz) -> t0
+(tz -> tz) = bool
+Error
+	
+6. 	proc (x)
+		proc (p)
+			proc (f)
+				if (p x) then -(x, 1) else (f p)
+
+x												tx	tx = int
+p												tp	tp = tx -> bool
+f												tf	tf = tp -> int
+proc (x)
+	proc (p)
+		proc (f)
+			if (p x) then -(x, 1) else (f p)	t0	t0 = tx -> t4
+
+proc (p)
+	proc (f)
+		if (p x) then -(x, 1) else (f p)		t1	t1 = tp -> t2
+proc (f)
+	if (p x) then -(x, 1) else (f p)			t2	t2 = tf -> t3
+if (p x) then -(x, 1) else (f p)				t3	t3 = t5
+(p x)										t4	t4 = bool
+-(x 1)										t5	t5 = int
+(f p)										t6	t6 = int
+
+t0 = proc (x) proc (p) proc (f) if (p x) then -(x, 1) else (f p)
+
+t0 = tx -> (tp -> (tf -> t3))
+t0 = int -> ((tx -> bool) -> ((tp -> int) -> t5))
+t0 = int -> ((int -> bool) -> ((tx -> bool) -> int) -> int)
+t0 = int -> ((int -> bool) -> ((int -> bool) -> int) -> int)

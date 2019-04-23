@@ -1,0 +1,1 @@
+("6.10.1" ("bb9fe55649d57c0036594b27a9763898fc2b5f0b" . "90ab4afdb8d5025231a0193c00fe3c191a0778e6") #"/Users/jacobdarabaris/Desktop/let-lang/data-structures.scm" (collects #"eopl" #"eopl.rkt") (collects #"errortrace" #"errortrace-key.rkt"))

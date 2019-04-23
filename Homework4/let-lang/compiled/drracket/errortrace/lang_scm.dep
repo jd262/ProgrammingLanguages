@@ -1,0 +1,1 @@
+("6.10.1" ("1e4e716fb7439220e4137b4444b16c053e49a98c" . "6b9789b10b02a0bbf28d25db6d5b97261bdb600e") #"/Users/jacobdarabaris/Desktop/let-lang/drscheme-init.scm" (collects #"eopl" #"eopl.rkt") (collects #"errortrace" #"errortrace-key.rkt"))
