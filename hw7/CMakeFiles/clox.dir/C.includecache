@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jacobdarabaris/Downloads/hw7/chunk.h
+common.h
+/Users/jacobdarabaris/Downloads/hw7/common.h
+value.h
+/Users/jacobdarabaris/Downloads/hw7/value.h
+
+/Users/jacobdarabaris/Downloads/hw7/common.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+/Users/jacobdarabaris/Downloads/hw7/debug.h
+chunk.h
+/Users/jacobdarabaris/Downloads/hw7/chunk.h
+
+/Users/jacobdarabaris/Downloads/hw7/main.c
+common.h
+/Users/jacobdarabaris/Downloads/hw7/common.h
+chunk.h
+/Users/jacobdarabaris/Downloads/hw7/chunk.h
+debug.h
+/Users/jacobdarabaris/Downloads/hw7/debug.h
+vm.h
+/Users/jacobdarabaris/Downloads/hw7/vm.h
+stdio.h
+/Users/jacobdarabaris/Downloads/hw7/stdio.h
+
+/Users/jacobdarabaris/Downloads/hw7/value.h
+
+/Users/jacobdarabaris/Downloads/hw7/vm.h
+chunk.h
+/Users/jacobdarabaris/Downloads/hw7/chunk.h
+value.h
+/Users/jacobdarabaris/Downloads/hw7/value.h
+
