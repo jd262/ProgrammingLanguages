@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/clox.dir/main.c.o CMakeFiles/clox.dir/chunk.c.o CMakeFiles/clox.dir/memory.c.o CMakeFiles/clox.dir/debug.c.o CMakeFiles/clox.dir/value.c.o CMakeFiles/clox.dir/vm.c.o  -o clox 
